@@ -6,7 +6,7 @@
   <input class="form-control mr-sm-2" type="text" required name="username" [(ngModel)]="model.username" placeholder="Username"> <br />
   <input class="form-control mr-sm-2" type="password" required name="password" [(ngModel)]="model.password" placeholder="Password"> <br />
   <input name="passwordConfirm" class="form-control mr-sm-2" type="password" placeholder="Confirm Password" [(ngModel)]="PasswordConfirmation.passwordConfirm" required />
-  <alert *ngIf="!PassVerify()" class="alert alert-danger">Passwords Do not Match!</alert>
+  <alert *ngIf="!VarifyPassword()" class="alert alert-danger">Passwords Do not Match!</alert>
   <div class="buttons">
       <button class="btn btn-success btn-lg" type="submit" [disabled]="!RegisterForm.valid">Register</button>
 
