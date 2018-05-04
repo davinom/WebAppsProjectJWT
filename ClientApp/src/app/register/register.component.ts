@@ -9,11 +9,11 @@ import { AlertComponent } from 'ngx-bootstrap/alert/alert.component';
 })
 export class RegisterComponent implements OnInit {
   model = { username: '', password: '' };
-  passwordCon = { password: '' };
+  passwordConf = { password: '' };
   errors: string[] = [];
   success = false;
 
-  passwordConAlert = {
+  passwordConfAlert = {
     type: 'danger',
     msg: 'Passwords do not match!',
     timeout: 10000
@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  checkPassword() {
+  VarifyPassword() {
     return this.model.password == this.passwordCon.password;
   }
 
@@ -44,7 +44,7 @@ export class RegisterComponent implements OnInit {
 
   
   register() {
-    if (this.checkPassword()) {
+    if (this.VarifyPassword()) {
       this.authService.Register(this.model).subscribe(data => this.success = true, error => this.getErrors(error.error));
     }
  
