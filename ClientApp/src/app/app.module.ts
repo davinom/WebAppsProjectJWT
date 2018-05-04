@@ -14,11 +14,6 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './services/auth.service';
-//import { MemberListComponent } from './Member/member-list/member-list.component';
-//import { MemberCardComponent } from './Member/member-card/member-card.component';
-//import { FriendsListComponent } from './friends-list/friends-list.component';
-//import { MessagesComponent } from './messages/messages.component';
-//import { UserServiceService } from './Services/user-service.service';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -29,10 +24,7 @@ export function tokenGetter() {
     NavComponent,
     HomeComponent,
     RegisterComponent,
-    //MemberListComponent,
-    // MemberCardComponent,
-    //FriendsListComponent,
-    //MessagesComponent
+
   ],
   imports: [
     BrowserModule,
